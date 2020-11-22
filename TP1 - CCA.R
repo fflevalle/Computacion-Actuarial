@@ -18,7 +18,7 @@ library("yardstick")
 library(modeest)
 library(corplot)
 
-#Seteo el theme que nos gusta por default para aplicarlo al resto de los graficos
+#Seteamos el theme que nos gusta por default para aplicarlo al resto de los graficos
 
 theme_set(theme(
   text = element_text(family = "Times New Roman", size = 12),
@@ -31,7 +31,7 @@ theme_set(theme(
   panel.border = element_rect(color = "grey", fill = NA, size = 0.5)))   
 
 
-#Importo el dataset y lo limpio
+#Importamos el dataset y lo limpio
 
 setwd("C:/Users/Facundo/OneDrive - Facultad de Ciencias Económicas - Universidad de Buenos Aires/Universidad de Buenos Aires/2020/Segundo Cuatrimestre/Computacion Cientifica Actuarial/TP 1")
 choco <- read.csv("flavors_of_cacao.csv", encoding = "UTF-8" , stringsAsFactors = FALSE , na.strings = " ")
@@ -200,7 +200,7 @@ tb <- comvsrating %>% arrange(desc(count))
 write.csv(tb , file = "tb.csv", row.names = TRUE )
 
 
-#¿Qué paises producen las barras de cacao mejor con mejor calificación?
+#¿Qué paises producen las barras de cacao con mejor calificación?
 # Para responder esta pregunta hay que observar las variables Company location y Rating.
 
 locvsrating <- choco[,c("Company_Location","Rating")]%>%
